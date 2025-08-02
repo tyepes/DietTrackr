@@ -1,0 +1,6 @@
+@DietTrackr_HostAddress = http://localhost:5240
+
+GET {{DietTrackr_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

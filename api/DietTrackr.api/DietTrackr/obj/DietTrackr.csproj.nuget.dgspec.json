@@ -1,0 +1,86 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/tomas-yepes/Projects/DietTrackr/api/DietTrackr.api/DietTrackr/DietTrackr.csproj": {}
+  },
+  "projects": {
+    "/home/tomas-yepes/Projects/DietTrackr/api/DietTrackr.api/DietTrackr/DietTrackr.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/tomas-yepes/Projects/DietTrackr/api/DietTrackr.api/DietTrackr/DietTrackr.csproj",
+        "projectName": "DietTrackr",
+        "projectPath": "/home/tomas-yepes/Projects/DietTrackr/api/DietTrackr.api/DietTrackr/DietTrackr.csproj",
+        "packagesPath": "/home/tomas-yepes/.nuget/packages/",
+        "outputPath": "/home/tomas-yepes/Projects/DietTrackr/api/DietTrackr.api/DietTrackr/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/tomas-yepes/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "HotChocolate.AspNetCore": {
+              "target": "Package",
+              "version": "[15.1.8, )"
+            },
+            "HotChocolate.Data.EntityFramework": {
+              "target": "Package",
+              "version": "[15.1.8, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.117/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
