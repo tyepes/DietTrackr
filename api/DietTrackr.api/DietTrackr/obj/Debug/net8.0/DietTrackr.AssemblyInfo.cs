@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DietTrackr")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d2fb230fd7963e949d8d025db8e25422c9ba38dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("DietTrackr")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DietTrackr")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

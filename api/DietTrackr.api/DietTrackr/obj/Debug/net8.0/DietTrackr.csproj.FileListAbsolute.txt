@@ -116,3 +116,4 @@
 /home/tomas-yepes/Projects/DietTrackr/api/DietTrackr.api/DietTrackr/obj/Debug/net8.0/DietTrackr.pdb
 /home/tomas-yepes/Projects/DietTrackr/api/DietTrackr.api/DietTrackr/obj/Debug/net8.0/DietTrackr.genruntimeconfig.cache
 /home/tomas-yepes/Projects/DietTrackr/api/DietTrackr.api/DietTrackr/obj/Debug/net8.0/ref/DietTrackr.dll
+/home/tomas-yepes/Projects/DietTrackr/api/DietTrackr.api/DietTrackr/obj/Debug/net8.0/DietTrackr.sourcelink.json
