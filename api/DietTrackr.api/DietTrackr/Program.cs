@@ -4,12 +4,14 @@ using HotChocolate;
 using HotChocolate.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
+using DietTrackr.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddScoped<IUserService, UserService>();
 // Add GraphQL services to the container.
 builder.Services
     .AddGraphQLServer()

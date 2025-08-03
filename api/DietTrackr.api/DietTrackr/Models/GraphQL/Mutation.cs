@@ -1,15 +1,14 @@
+using DietTrackr.Data;
+using DietTrackr.Services;
+using HotChocolate;
+
 namespace DietTrackr.Models
 {
     public class Mutation
     {
-        public User CreateUser(string name, string dietType)
+        public async Task<User> CreateUserAsync(string name, string dietType, [Service] IUserService userService)
         {
-            return new User
-            {
-                Id = Guid.NewGuid(),
-                Name = name,
-                DietType = dietType
-            };
+            return await userService.CreateUserAsync(name, dietType);
         }
     }
 }
