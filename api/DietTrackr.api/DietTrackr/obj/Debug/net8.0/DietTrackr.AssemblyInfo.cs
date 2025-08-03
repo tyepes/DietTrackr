@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("a1e61041-b769-423b-9b87-ee30afecf026")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("DietTrackr")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d2fb230fd7963e949d8d025db8e25422c9ba38dd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9738b357f07ae4de15cef1c351b7032d811eda1c")]
 [assembly: System.Reflection.AssemblyProductAttribute("DietTrackr")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DietTrackr")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
