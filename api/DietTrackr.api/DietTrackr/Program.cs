@@ -11,12 +11,22 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddScoped<IUserService, UserService>();
+builder.Services
+    .AddScoped<IUserService, UserService>()
+    .AddScoped<IMealLogService, MealLogService>();
 // Add GraphQL services to the container.
 builder.Services
     .AddGraphQLServer()
     .AddQueryType<Query>()
-    .AddMutationType<Mutation>();
+    .AddMutationType<Mutation>()
+
+    .ModifyRequestOptions(options =>
+    {
+        if (builder.Environment.IsDevelopment())
+        {
+            options.IncludeExceptionDetails = true;
+        }
+    });
 
 var app = builder.Build();
 

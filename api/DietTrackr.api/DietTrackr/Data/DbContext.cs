@@ -10,6 +10,7 @@ namespace DietTrackr.Data
 
         public DbSet<User> Users { get; set; }
         public DbSet<FoodItem> FoodItems { get; set; }
+        public DbSet<MealEntry> MealEntries { get; set; }
     }
 }
 

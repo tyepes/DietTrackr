@@ -3,6 +3,7 @@ using System;
 using DietTrackr.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DietTrackr.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250803201008_NewCreate")]
+    partial class NewCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,9 +45,6 @@ namespace DietTrackr.Migrations
                     b.Property<double>("Fats")
                         .HasColumnType("double precision");
 
-                    b.Property<Guid?>("MealEntryId")
-                        .HasColumnType("uuid");
-
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
@@ -56,35 +56,7 @@ namespace DietTrackr.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MealEntryId");
-
                     b.ToTable("FoodItems");
-                });
-
-            modelBuilder.Entity("DietTrackr.Models.MealEntry", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTime>("DateTime")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<int>("MealType")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Notes")
-                        .HasColumnType("text");
-
-                    b.Property<double>("TotalCalories")
-                        .HasColumnType("double precision");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("MealEntries");
                 });
 
             modelBuilder.Entity("DietTrackr.Models.User", b =>
@@ -104,18 +76,6 @@ namespace DietTrackr.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("DietTrackr.Models.FoodItem", b =>
-                {
-                    b.HasOne("DietTrackr.Models.MealEntry", null)
-                        .WithMany("FoodItems")
-                        .HasForeignKey("MealEntryId");
-                });
-
-            modelBuilder.Entity("DietTrackr.Models.MealEntry", b =>
-                {
-                    b.Navigation("FoodItems");
                 });
 #pragma warning restore 612, 618
         }
