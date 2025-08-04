@@ -5,9 +5,6 @@ const MealLog = ({ userId }) => {
   const { loading, error, data } = useQuery(GET_MEAL_ENTRIES, {
     variables: { userId },
   });
-  console.log(GET_MEAL_ENTRIES)
-  console.log({ loading, error, data });
-  console.log('GraphQL URL:', import.meta.env.VITE_GRAPHQL_API_URL);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
