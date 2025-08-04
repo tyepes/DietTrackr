@@ -10,6 +10,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy
+            .WithOrigins("http://localhost:5173") // Vite default port
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 
 builder.Services
     .AddScoped<IUserService, UserService>()
@@ -34,5 +44,7 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 
 app.MapGraphQL();
+
+app.UseCors();
 
 app.Run();

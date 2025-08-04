@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DietTrackr")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6409317bcad394f42e166f83e3bd0f9e40ae8ea0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee3e85aebfa7faa2640226061abcb1eb63455d71")]
 [assembly: System.Reflection.AssemblyProductAttribute("DietTrackr")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DietTrackr")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
